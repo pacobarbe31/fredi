@@ -62,7 +62,7 @@ include('../inc/navbar.php') ;
                         <?php
                         $licence_adh = $adherent->getLicence_adh();
                         $id_club = $adherent->getid_club();
-                                $nb1 = $notefraisDAO->insert($licence_adh, $id_club);
+                        $nb1 = $notefraisDAO->insert($licence_adh, $id_club);
                         ?>
 					</div>
 				</div>
