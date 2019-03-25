@@ -12,7 +12,7 @@
     <!-- PROFIL UTILISATEUR DANS NAVNAR -->
     <div class="profile-sidebar">
         <div class="profile-userpic">
-            <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+            <img src="../img/responsable.ico" class="img-responsive" alt="">
         </div>
         <div class="profile-usertitle">
             <div class="profile-usertitle-name"><?php echo "". $responsable_legal->getPrenom_resp_leg() . " ". $responsable_legal->getNom_resp_leg() . "";?></div>
@@ -24,10 +24,10 @@
     <div class="divider"></div>
         
         <!-- ESPACE RESPONSABLE LEGAL -->
-        <li><a href="../espace_responsable/espace_resp_leg.php"><em class="fa fa-calendar">&nbsp;</em> Mon espace</a></li>
+        <li><a href="../espace_responsable/espace_resp_leg.php"><em class="fas fa-home">&nbsp;</em> Mon espace</a></li>
 
         <!-- INSCRIPTION D'UN MINEUR -->
-        <li><a href="../espace_responsable/register_adh_mineur.php"><em class="fa fa-calendar">&nbsp;</em> Inscrire enfant</a></li>
+        <li><a href="../espace_responsable/register_adh_mineur.php"><em class="fas fa-user-plus">&nbsp;</em> Inscrire enfant</a></li>
 
         <!-- DECONNEXION -->
         <li><a href="../deconnexion.php"><em class="fa fa-power-off">&nbsp;</em> Deconnexion</a></li>
@@ -40,7 +40,7 @@
         <!-- PROFIL UTILISATEUR DANS NAVNAR -->
         <div class="profile-sidebar">
             <div class="profile-userpic">
-                <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+                <img src="../img/majeur.ico" class="img-responsive" alt="">
             </div>
             <div class="profile-usertitle">
                 <div class="profile-usertitle-name"><?php echo $adherent->getPrenom_adh() . ' ' . $adherent->getNom_adh() ;?></div>
@@ -50,10 +50,10 @@
         </div>
 
         <!-- ESPACE MAJEUR -->
-        <li><a href="../espace_majeur/espace_adh.php"><em class="fa fa-calendar">&nbsp;</em> Mon espace</a></li>
+        <li><a href="../espace_majeur/espace_adh.php"><em class="fas fa-home">&nbsp;</em> Mon espace</a></li>
         
         <!-- BORDEREAU MAJEUR -->
-        <li><a href="../espace_majeur/list_borderaux.php"><em class="fa fa-calendar">&nbsp;</em> Mes bordereaux</a></li>
+        <li><a href="../espace_majeur/list_borderaux.php"><em class="fas fa-file-alt">&nbsp;</em> Mes bordereaux</a></li>
 
         <!-- DECONNEXION -->
         <li><a href="../deconnexion.php"><em class="fa fa-power-off">&nbsp;</em> Deconnexion</a></li>
@@ -66,7 +66,7 @@
         <!-- PROFIL VISITEUR DANS NAVNAR -->
         <div class="profile-sidebar">
             <div class="profile-userpic">
-                <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+                <img src="../img/tresorier.ico" class="img-responsive" alt="">
             </div>
             <div class="profile-usertitle">
                 <div class="profile-usertitle-name"><?php echo $tresorier->getprenom_tresorier() . ' ' . $tresorier->getnom_tresorier() ;?></div>
@@ -75,8 +75,8 @@
             <div class="clear"></div>
         </div>
           
-        <!-- ESPACE MAJEUR -->
-        <li><a href="../espace_tresorier/espace_tresorier.php"><em class="fa fa-calendar">&nbsp;</em> Mon espace</a></li>
+        <!-- ESPACE TRESORIER -->
+        <li><a href="../espace_tresorier/espace_tresorier.php"><em class="fas fa-home">&nbsp;</em> Mon espace</a></li>
 
         <!-- DECONNEXION -->
         <li><a href="../deconnexion.php"><em class="fa fa-power-off">&nbsp;</em> Deconnexion</a></li>
@@ -89,7 +89,7 @@
         <!-- PROFIL VISITEUR DANS NAVNAR -->
         <div class="profile-sidebar">
             <div class="profile-userpic">
-                <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+                <img src="img/visiteur.png" class="img-responsive" alt="">
             </div>
             <div class="profile-usertitle">
                 <div class="profile-usertitle-name">VISITEUR</div>
@@ -101,7 +101,6 @@
         <div class="divider"></div>
 
         <!-- ACCUEIL -->
-        
         <li class=""><a href="index.php"><em class="fas fa-home">&nbsp;</em> Accueil</a></li>
 
         <!-- CONNEXION -->
