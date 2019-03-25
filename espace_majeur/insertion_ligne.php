@@ -28,9 +28,6 @@ $lignefraisDAO = new LignefraisDAO;
 $motifDAO = new MotifDAO();
 $motifs = $motifDAO->findAll();
 
-// On récupère les infos du reponsable par son email dans $responsable_legal (tableau objet)
-$responsable_legalDAO = new Responsable_legalDAO();
-$responsable_legal= $responsable_legalDAO->findByMail($mail_resp_leg);
 ?>
 
 <body>
