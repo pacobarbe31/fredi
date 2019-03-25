@@ -54,7 +54,7 @@ include('inc/navbar.php') ;
 						}
 						?>
 					<div class="panel-heading">Bienvenue sur le site FREDI
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span></div>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span></div>
 					<div class="panel-body">
 						<p>Vous êtes à l'accueil de la page.</p>
 					</div>

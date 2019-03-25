@@ -67,7 +67,7 @@ include('../inc/navbar.php') ;
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">Inscription du licencié mineur
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
 					<?php

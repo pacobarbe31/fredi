@@ -55,7 +55,7 @@ include('../inc/navbar.php') ;
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">Accéder à vos informations personnelles
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
 					<table class="table table-hover">
@@ -90,7 +90,7 @@ include('../inc/navbar.php') ;
 			<div class="col-md-12">
 				<div class="panel panel-primary">
 					<div class="panel-heading">Gérez les bordereaux
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
 						<p>Pour valider ou éditer de(s) bordereau(x), cliquez sur <strong>"Borderaux"</strong>.</p>
@@ -110,7 +110,7 @@ include('../inc/navbar.php') ;
 			<div class="col-md-12">
 				<div class="panel panel-success">
 					<div class="panel-heading">Modifier le tarif kilométrique
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
 						<p>Pour modifier le tarif kilométrique, cliquez sur <strong>"Tarif Kilométrique"</strong>.</p>

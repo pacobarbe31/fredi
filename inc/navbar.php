@@ -101,11 +101,12 @@
         <div class="divider"></div>
 
         <!-- ACCUEIL -->
-        <li class=""><a href="index.php"><em class="fa fa-dashboard">&nbsp;</em> Accueil</a></li>
+        
+        <li class=""><a href="index.php"><em class="fas fa-home">&nbsp;</em> Accueil</a></li>
 
         <!-- CONNEXION -->
         <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-            <em class="fa fa-navicon">&nbsp;</em> Connexion <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+            <em class="fas fa-bars">&nbsp;</em> Connexion <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
 
@@ -128,7 +129,7 @@
 
         <!-- INSCRIPTION -->
         <li class="parent "><a data-toggle="collapse" href="#sub-item-2">
-            <em class="fa fa-navicon">&nbsp;</em> Inscription <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
+            <em class="fas fa-bars">&nbsp;</em> Inscription <span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-2">
 

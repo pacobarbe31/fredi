@@ -55,7 +55,7 @@ include('../inc/navbar.php') ;
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">Accéder à vos informations personnelles
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
 						<table class="table table-hover">
@@ -96,7 +96,7 @@ include('../inc/navbar.php') ;
 			<div class="col-md-12">
 				<div class="panel panel-success">
 					<div class="panel-heading">Gérez vos borderaux
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
 						<p>Pour lire ou éditer votre bordereau, cliquez sur <strong>"Voir mes borderaux"</strong>.</p>

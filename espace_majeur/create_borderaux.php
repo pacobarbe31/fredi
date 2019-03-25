@@ -34,7 +34,7 @@ include('../inc/navbar.php') ;
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#">
-					<em class="fa fa-home"></em>
+					<em class="fas fa-home"></em>
 				</a></li>
 				<li class="active">Mes Bordereaux</li>
 			</ol>
@@ -52,7 +52,7 @@ include('../inc/navbar.php') ;
 			<div class="col-md-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">Licencié : <?php echo $adherent->getPrenom_adh() . ' ' . $adherent->getNom_adh() ;?>
-						<span class="pull-right clickable panel-toggle"><em class="fa fa-toggle-up"></em></span>
+						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
                         <h4 align='center'>Vous avez créer votre premier bordereau, cliquez ci-dessous pour le visualiser ou l'éditer : </h4>
