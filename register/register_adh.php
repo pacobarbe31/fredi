@@ -153,7 +153,6 @@ $adherentCSVDAO = new AdherentCSVDAO;
 <?php 
 include('../inc/script_niveau2.php') ; 
 ?>
-<p align="center"><a href="../index.php" class="btn btn-info">Accueil</a> <a href="../login/connexion_adh.php" class="btn btn-primary"> Connexion</a></p>
 
 </body>
 </html>

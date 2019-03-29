@@ -170,7 +170,7 @@ include('../inc/navbar.php') ;
 							$notefraisDAO = new NotefraisDAO();
 							$nb1 = $notefraisDAO->insert($licence_adh, $id_club);
 
-							header('Location: espace_resp_leg.php?inscrit=1');
+							rediriger('espace_resp_leg.php?inscrit=1');
 
 							// Obligatoire sinon PHP continue à exécuter le script
 							exit;  
