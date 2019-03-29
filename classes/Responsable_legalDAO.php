@@ -46,6 +46,23 @@ class Responsable_legalDAO extends DAO {
   }
 
   /**
+   * Lecture des licenciés mineurs à la charge du responsable legal
+   * @return \Adherents
+   */
+  function findAllMineurs($id_resp_leg) {
+    $sql = "SELECT prenom_adh, nom_adh, licence_adh FROM adherent, responsable_legal where adherent.id_resp_leg = responsable_legal.id_resp_leg AND responsable_legal.id_resp_leg = $id_resp_leg";
+    $sth = $this->executer($sql);
+    $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $tableau = array();
+    foreach ($rows as $row) {
+      $tableau[] = new Responsable_legal($row);
+    }
+    // Retourne un tableau d'objets métier
+    return $tableau;
+  }
+
+
+  /**
    * Lecture d'un responsable legal par son EMAIL
    *
    * @param type $mail_resp_leg

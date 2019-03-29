@@ -11,6 +11,10 @@ private $ville_resp_leg;
 private $mail_resp_leg;
 private $mdp_resp_leg;
 
+private $licence_adh="";
+private $nom_adh;
+private $prenom_adh; 
+
 
 // function construct
 function __construct(array $tableau = null) {
@@ -83,6 +87,33 @@ public function getId_resp_leg(){
  public function setMdp_resp_leg($mdp_resp_leg){
   $this->mdp_resp_leg = $mdp_resp_leg;
  }
+
+ // Mineurs 
+ // function get & set
+ function getLicence_adh(){
+  return $this->licence_adh;
+}
+
+ function setLicence_adh($licence_adh){
+  $this->licence_adh = $licence_adh;
+}
+
+ function getNom_adh(){
+  return $this->nom_adh;
+}
+
+ function setNom_adh($nom_adh){
+  $this->nom_adh = $nom_adh;
+}
+
+ function getPrenom_adh(){
+  return $this->prenom_adh;
+}
+
+function setPrenom_adh($prenom_adh){
+  $this->prenom_adh = $prenom_adh;
+}
+
 
 //hydrateur
 function hydrater(array $tableau) {

@@ -19,6 +19,13 @@ if (isset($_SESSION['mail_resp_leg'])) {
 // On récupère les infos du reponsable par son email dans $responsable_legal (tableau objet)
 $responsable_legalDAO = new Responsable_legalDAO();
 $responsable_legal= $responsable_legalDAO->findByMail($mail_resp_leg);
+
+// On récupère la liste des bordereau de ses mineurs
+$notefraisDAO = new NotefraisDAO();
+$notes= $notefraisDAO->findBordereauBy($id_resp_leg);
+
+// On vérifie si toutes les notes de frais des adherents mineurs sont validées (return true / false)
+$notes_mineurs=$notefraisDAO->findIfAllNoteFraisIsValidate($id_resp_leg);
 ?>
 
 <body>
@@ -138,9 +145,17 @@ include('../inc/navbar.php') ;
 								echo '<td>'.$adherent->getLicence_adh().'</td>';
 								echo '<td>'.$adherent->getNom_adh().'</td>';
 								echo '<td>'.$adherent->getPrenom_adh().'</td>';
-								echo '<td><p><a class="btn btn-primary" href="list_borderaux_mineur.php?id_resp_leg='. $id_resp_leg .'&licence_adh='. $adherent->getLicence_adh() .'" role="button">Accéder aux frais</a></p></td>';
-								echo '</tr>';
-							} ?>
+
+								// Si la note de frais de l'adhérent mineur est validée, on ne peut plus gérer ses frais
+								foreach($notes_mineurs as $note_mineur){}
+									if($note_mineur->getlicence_adh() == $adherent->getLicence_adh() && $note_mineur->getis_validate() == false){
+											echo '<td><p><a class="btn btn-primary" href="list_borderaux_mineur.php?id_resp_leg='. $id_resp_leg .'&licence_adh='. $adherent->getLicence_adh() .'" role="button">Accéder aux frais</a></p></td>';
+										} else {
+											echo '<td><p>Les gestion des frais pour cet adhérent mineur a été validée.</p></td>';
+										}
+									}
+							?>
+							</tr>
 							</tbody>
 						</table>
 
@@ -173,7 +188,43 @@ include('../inc/navbar.php') ;
 						<span class="pull-right clickable panel-toggle"><em class="fas fa-toggle-on"></em></span>
 					</div>
 					<div class="panel-body">
-						
+					<?php
+					if (count($notes) !== 0){
+                        echo "<table class='table table-hover'";
+                        echo '<tr>';
+                        echo '<th>Année</th>';
+                        echo '<th>Validé</th>';
+                        echo '<th>Exemplaire en PDF</th>';
+                        echo '</tr>';
+                    
+                        foreach ($notes as $note) {
+                          echo '<tr>';
+                          echo '<td>'.$note->getannee().'</td>';
+						  $validate = $note->getis_validate();
+						  
+                          if ($validate == 0)
+                          {
+                              echo '<td>Non</td>';
+                          } else {
+                              echo '<td>Oui</td>';
+                          }
+                    
+                          if ($validate == 0)
+                          {
+                              echo '<td>En attente de validation par le trésorier</td>';
+                          } else {
+                              echo '<td><a href="pdf_resp.php?id_resp_leg='. $id_resp_leg .'&annee='.$note->getannee().'">Lien en PDF</a></td>';
+                          }
+                          echo '</tr>';
+                    
+                        }
+                        echo '</table>';
+                    } else {
+                        echo 'Vous n\'avez pas encore ajouté de frais pour les licenciés mineurs à votre charge.';
+                        echo'</br>';echo'</br>';
+                        echo '<p>Veuillez <a href="register_adh_mineur.php">ajouter des licenciés mineurs</a> à votre charge ou ajouter leurs premiers frais.</p>';
+                    }
+					?>
 
 					</div>
 				</div>
