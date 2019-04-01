@@ -123,9 +123,7 @@ $adherentCSVDAO = new AdherentCSVDAO;
                         // Ajoute l'enregistrement dans la BDD
                         $nb = $adherentDAO->insert_adh($adherent);
                         
-                        rediriger('../connexion_adh.php?inscrit=1&mail='.$mail_inscrit.'');
-
-                        //header('Location: connexion_adh.php?inscrit=1&mail='.$mail_inscrit.'');
+                        header('Location: ../login/connexion_adh.php?inscrit=1&mail='.$mail_inscrit.'');
 
                         // Obligatoire sinon PHP continue à exécuter le script
                         exit;  
