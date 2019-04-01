@@ -27,12 +27,12 @@ Les jeux de données sont également disponible au format CSV dans le dossier FR
 
 ### 4. Test avec données :
 
-Connexion d'un adhérent : 
-- Login : paco.barbe@outlook.fr
+Connexion d'un adhérent majeur : 
+- Login : mounny.paul@outlook.fr
 - Mot de passe : 0000
 
-Connexion d'un responsable légal : 
-- Login : test1@outlook.fr
+Connexion du responsable légal : 
+- Login : richard.piquier@outlook.fr
 - Mot de passe : 0000
 
 Connexion du Trésorier :
