@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  lun. 17 déc. 2018 à 13:44
+-- Généré le :  lun. 01 avr. 2019 à 15:27
 -- Version du serveur :  10.1.30-MariaDB
 -- Version de PHP :  7.2.1
 
@@ -21,13 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `fredi`
 --
+CREATE DATABASE IF NOT EXISTS `fredi` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `fredi`;
 
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `adherent`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `adherent`;
 CREATE TABLE `adherent` (
   `licence_adh` varchar(25) NOT NULL,
   `nom_adh` varchar(25) DEFAULT NULL,
@@ -50,10 +55,30 @@ CREATE TABLE `adherent` (
 INSERT INTO `adherent` (`licence_adh`, `nom_adh`, `prenom_adh`, `sexe_adh`, `date_naissance_adh`, `adresse_adh`, `cp_adh`, `ville_adh`, `mail_inscrit`, `mdp_inscrit`, `id_club`, `id_resp_leg`) VALUES
 ('10', 'JP', 'Antoine', 'H', '1997-06-07', '4 rue idrac', '31000', 'toulouse', 'antoineba@outlook.fr', '$2y$10$n2PbT56IT/MexWDxFf7qPe8tMMzROoKSWxFKDQhZoAReoXiPcD4WS', 1, NULL),
 ('140506071023', 'Boube', 'Antoine', 'F', '1996-11-26', '4 rue idrac', '31000', 'toulouse', 'antoine.boubeastugue@outlook.fr', '$2y$10$7SxFXP8LvlXGHGo072kW7./XLKfPaJ6TkJccVHVGV76/25EmRkfdK', 1, NULL),
+('170540010414', 'CHERPION', 'UGO', 'H', '1997-09-24', '63, rue Francais', '54000', 'Nancy', 'testou@live.fr', '$2y$10$YXcR3Z3SslMpSsR/ewOtGOTr/A.bqlRgT6HaVO36EdDLcuFBxCvAO', 1, NULL),
+('170540010419', 'LANIELLE', 'NICOLAS', 'H', '1998-09-02', '10, rue des orchidees', '54600', 'Villers les Nancy', 'testtest@live.fr', '$2y$10$zIDFXL7uWAqGWs60xkOvV.JHST.CVFYh4q0yG/ggJ3NLLJ9KzIOSu', 1, NULL),
+('170540010498', 'CHARLY', 'BARBE', 'H', '1995-06-10', '10 avenue Tonton', '66000', 'Perpignan', 'charly.barbe@outlook.fr', '$2y$10$wM0oSXBr/.6wGvpNPUBJwOXS0oO2o4Pdg9mu7TpSCVk7VzJd5qR7a', 1, NULL),
+('1705400104989', 'PIQUIERd', 'JULIEd', 'H', '1997-05-03', '3 RUE DU CHATEAU NOIR', '31400', 'TOULOUSE', 'dddddd@outlook.fr', '$2y$10$cXASAoJc4zQ6UCQNxZ41XuZhr0td0XZTvvxeuXSMGCzr7UgekiIhO', 1, NULL),
+('17054001049898', 'aaa', 'aa', 'F', '1997-05-03', '3 rue Jiji', '31400', 'Toulouse', 'azaza@outlook.fr', '$2y$10$QM52zYaQAU6Vhxp2jccWmuhAF38jELYWCkybTd12JIgTbHhfiF.7O', 1, NULL),
 ('170540010556', 'Barbé', 'Paco', 'H', '1997-05-03', '6 RUE GEORGES PICOT', '31400', 'Toulouse', 'paco.barbe@outlook.fr', '$2y$10$QYZOSx/5ITAy3IwRIMLXcOIHMqCYqzQYUvhDzCEe.1w728Fz8BKLu', 50, NULL),
 ('170540010557', 'Azerty', 'Azert', 'H', '1997-07-18', '5 RUE GEORGES PICOT', '31400', 'TOULOUSE', 'azerty.azer@outlook.fr', '$2y$10$bdnRY5ywjEW3ZTiswASCKO3PM7ic2a35nboCz8Iuw.UW2uNMGE/di', 45, NULL),
 ('170540010558', 'Jean', 'Bonneau', 'H', '1997-06-05', '2, Rue Picasso', '31400', 'Toulouse', 'jean.bonneau@outlook.fr', '$2y$10$sQnYXeoYx7mh77qExfoOX.y3EVjRokFH.p.KdVjERw3Zc8iup6kqC', 7, NULL),
+('170540010559', 'Nova', 'Mamie', 'F', '1997-05-03', '2 rue Picotie', '31400', 'Carotte', 'mamie.nova@outlook.fr', '$2y$10$qvzvBsZw6kYUQ/9GsL4ySOq.mIRSkeZxIPOObhNezTMOs0xtmNSdG', 1, NULL),
+('170540010560', 'Macfie', 'Nanie', 'F', '1995-10-10', '2 rue Picotasse', '31400', 'Toulouse', 'nanie.macfie@outlook.fr', '$2y$10$uGbdW7NIa/nqg2DUTuDTG.DmHGxnA5XElE5py5F2X4Q.ip.hZdX2y', 1, NULL),
 ('170540010561', 'Barbé', 'Charly', 'H', '1997-05-03', '13 rue du Marché', '66300', 'Banyuls-Dels-Aspres', 'charly.barbe@outlook.fr', '$2y$10$119pAom7om43aanDr1ciV.fvKaqK07xuc0EdYfcWRgqX.9TCciL9a', 1, 4),
+('170540010562', 'Test3', 'Test3', 'F', '1995-05-03', '2 rue test3', '31400', 'Toulouse', 'mamie.nova@outlook.fr', '$2y$10$YuCUdHvcdJBAPTkNf6Wagu6fgkQGfCeqPAQIzXxS41QnCsxahZiEe', 1, NULL),
+('170540010563', 'Jean', 'Bonneau', 'F', '1197-05-03', '2 rue Picotie', '31400', 'Carotte', 'ppppb@outlook.fr', '$2y$10$7J9h96NivcByHnCzr5orP.gmNkIM9VpG0rnTm4XWZhlQeARk8Qcg2', 1, NULL),
+('170540010565', 'Jean', 'Bonneau', 'H', '1997-05-03', '2 rue Picotiyy', '31400', 'Carotte', 'jbjb@outlook.fr', '$2y$10$3bM2/qdI5uh1PRZWKoVxwuNhMC9./y0o65gw2cDUS5sVlLF0vJNPu', 1, NULL),
+('170540010567', 'Jean', 'Bonneau', 'H', '1997-05-03', '2 rue Picotie', '31400', 'Carotte', 'jobijoba@outlook.fr', '$2y$10$Qg/FzjmJVAFmVkXKGo80nurSGnhZR.yEb1BkjLcCBGMt4bOhjJi3y', 18, NULL),
+('170540010570', 'Croquette', 'Janette', 'F', '1996-11-02', '3 rue Jiji', '31400', 'Toulouse', 'janette.croquette@outlook.fr', '$2y$10$xkKGHC8wlOzwbmabhk4IG.RIFG9fMud8BShYmuuCy9xpHxKf.keRG', 1, NULL),
+('170540010576', 'Petit', 'Boukrou', 'H', '2010-05-03', '1 rue A', '31200', 'Toulouse', NULL, NULL, 1, 3),
+('170540010578', 'Petit', 'Boullou', 'H', '2011-05-03', '13 rue du Marché', '66300', 'Perpignan', NULL, NULL, 1, 3),
+('170540010580', 'Croquette', 'Janette', 'F', '1997-05-06', '3 rue Jiji', '31400', 'Toulouse', 'azaazappz@outlook.fr', '$2y$10$Qwp4Y6HtioDcpywflG/c2Os6jRqBtuklungGXRJnHAtgwlaL3.IMG', 1, NULL),
+('170540010581', 'Petit', 'Boukrouuille', 'F', '2005-05-03', '1 Rue A', '31200', 'Toulouse', NULL, NULL, 1, 3),
+('170540010582', 'Petit', 'Michou', 'F', '2009-05-03', '1 Rue A', '31200', 'Toulouse', NULL, NULL, 1, 3),
+('170540010583', 'PIQUIER', 'JULIE', 'F', '2005-05-03', '3 RUE DU CHATEAU NOIR', '31400', 'TOULOUSE', NULL, NULL, 1, 7),
+('170540010584', 'PIQUIER', 'GAETAN', 'H', '2003-06-10', '3 RUE DU CHATEAU NOIR', '31400', 'TOULOUSE', NULL, NULL, 1, 7),
+('170540010585', 'MOUNNY', 'PAUL', 'H', '1997-05-01', '3 RUE DU VERT', '31400', 'TOULOUSE', 'mounny.paul@outlook.fr', '$2y$10$U7N9dTnxN6ssBdm6YG6YTexl5TOBLvgIW0FSj4IiBOA/DewRAHT3u', 1, NULL),
 ('57', 'Boube', 'Antoine', 'H', '1997-06-13', '4 rue idrac', '31000', 'toulouse', 'bastugue@outlook.fr', '$2y$10$ym2WWS7zA0i0OKEqBu/wZe0xNmTXjhCA9nglm0Q7Rdbmd7Q3F.S/.', 1, NULL);
 
 -- --------------------------------------------------------
@@ -61,7 +86,10 @@ INSERT INTO `adherent` (`licence_adh`, `nom_adh`, `prenom_adh`, `sexe_adh`, `dat
 --
 -- Structure de la table `adherent_csv`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `adherent_csv`;
 CREATE TABLE `adherent_csv` (
   `licence_adh_csv` varchar(25) NOT NULL,
   `sexe_adh_csv` varchar(1) DEFAULT NULL,
@@ -124,7 +152,10 @@ INSERT INTO `adherent_csv` (`licence_adh_csv`, `sexe_adh_csv`, `nom_adh_csv`, `p
 --
 -- Structure de la table `club`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `club`;
 CREATE TABLE `club` (
   `id_club` int(11) NOT NULL,
   `libelle_club` varchar(255) NOT NULL,
@@ -193,18 +224,31 @@ INSERT INTO `club` (`id_club`, `libelle_club`, `id_ligue`) VALUES
 --
 -- Structure de la table `indemnite`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `indemnite`;
 CREATE TABLE `indemnite` (
-  `annee` year(4) NOT NULL,
+  `annee` int(4) NOT NULL,
   `tarif_kilometrique` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `indemnite`
+--
+
+INSERT INTO `indemnite` (`annee`, `tarif_kilometrique`) VALUES
+(2019, 0.25);
 
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `ligne_frais`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `ligne_frais`;
 CREATE TABLE `ligne_frais` (
   `id_ligne_frais` int(11) NOT NULL,
   `date_frais` date DEFAULT NULL,
@@ -223,18 +267,20 @@ CREATE TABLE `ligne_frais` (
 --
 
 INSERT INTO `ligne_frais` (`id_ligne_frais`, `date_frais`, `trajet_frais`, `km_parcourus`, `cout_peage`, `cout_repas`, `cout_hebergement`, `annee`, `id_motif`, `id_note_frais`) VALUES
-(1, '2018-11-26', 'vince', 4, '45', '3', '8', 0000, 5, 1),
-(10, '2018-11-01', 'Bordereau - Brives', 56, '130', '27', '13', 0000, 2, 2),
-(11, '2018-11-08', 'Rennes', 10, '10', '11', '12', 0000, 1, 2),
-(12, '2018-11-26', 'toulouse', 4, '45', '3', '8', 0000, 3, 4),
-(13, '2018-11-14', 'toulouse', 78, '45', '4', '65', 0000, 5, 4);
+(28, '2019-03-07', 'COMPETITION PARIS-TOULOUS', 680, '120', '220', '350', 0000, 2, 19),
+(29, '2019-02-01', 'COMPETITION TOULOUSE-RENN', 700, '155', '245', '358', 0000, 2, 19),
+(30, '2019-02-16', 'REUNION PARIS', 680, '110', '115', '380', 0000, 1, 20),
+(31, '2019-02-13', 'COMPETITION PARIS-TOULOUS', 680, '120', '220', '350', 0000, 1, 21);
 
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `ligue`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `ligue`;
 CREATE TABLE `ligue` (
   `id_ligue` int(11) NOT NULL,
   `libelle_ligue` varchar(255) NOT NULL,
@@ -255,7 +301,10 @@ INSERT INTO `ligue` (`id_ligue`, `libelle_ligue`, `nom_ligue`) VALUES
 --
 -- Structure de la table `motif`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `motif`;
 CREATE TABLE `motif` (
   `id_motif` int(11) NOT NULL,
   `libelle_motif` varchar(25) DEFAULT NULL
@@ -277,7 +326,10 @@ INSERT INTO `motif` (`id_motif`, `libelle_motif`) VALUES
 --
 -- Structure de la table `note_frais`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `note_frais`;
 CREATE TABLE `note_frais` (
   `id_note_frais` int(11) NOT NULL,
   `licence_adh` varchar(25) NOT NULL,
@@ -291,17 +343,19 @@ CREATE TABLE `note_frais` (
 --
 
 INSERT INTO `note_frais` (`id_note_frais`, `licence_adh`, `annee`, `is_validate`, `id_club`) VALUES
-(1, '140506071023', 2018, 1, 0),
-(2, '170540010556', 2018, 0, 0),
-(3, '10', 2018, 0, 1),
-(4, '57', 2018, 0, 1);
+(19, '170540010583', 2019, 1, 1),
+(20, '170540010584', 2019, 1, 1),
+(21, '170540010585', 2019, 1, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `responsable_crib`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `responsable_crib`;
 CREATE TABLE `responsable_crib` (
   `id_resp_crib` int(11) NOT NULL,
   `nom_resp_crib` varchar(25) DEFAULT NULL,
@@ -316,7 +370,10 @@ CREATE TABLE `responsable_crib` (
 --
 -- Structure de la table `responsable_legal`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `responsable_legal`;
 CREATE TABLE `responsable_legal` (
   `id_resp_leg` int(11) NOT NULL,
   `nom_resp_leg` varchar(50) DEFAULT NULL,
@@ -336,14 +393,20 @@ INSERT INTO `responsable_legal` (`id_resp_leg`, `nom_resp_leg`, `prenom_resp_leg
 (1, 'Legal', 'Responsable', '14, rue Grue', '31200', 'Toulouse', 'RL1@outlook.fr', '$2y$12$8vt/EJ0t0aKsBAvFWTBlKu9GZ0cUQ3DdDm.LsqisWjSOWopuv6Zu6\r\n'),
 (2, 'Jack', 'Prevert', '2, Rue du Tour', '31380', 'Montastruc', 'jack.prevert@outlook.fr', '$2y$12$yQNEl3SPfTvSVcG/oRcgp.a0dxsaF1rVEa8naL9LtR06fIsfiEBNq\r\n'),
 (3, 'Test1', 'Test1', 'Test1', '31200', 'Toulouse', 'test1@outlook.fr', '$2y$10$PvGGCjS546IP9miS04f/NeiaHjq/1tZDlYh3rRDCymd8OsU68j0cS'),
-(4, 'Barbé', 'Franck', '16 rue du Marché', '66300', 'Banyuls-Dels-Aspres', 'franck.barbe@outlook.fr', '$2y$10$MQ28G5grsuoFBAsNg.fiCe7mfgfSe06wAYdGPsj0JBg/./Jgoaup.');
+(4, 'Barbé', 'Franck', '16 rue du Marché', '66300', 'Banyuls-Dels-Aspres', 'franck.barbe@outlook.fr', '$2y$10$MQ28G5grsuoFBAsNg.fiCe7mfgfSe06wAYdGPsj0JBg/./Jgoaup.'),
+(5, 'Jean', 'Ivre', '14 Rue Fripouille', '31400', 'Toulouse', 'jean.ivre@outlook.fr', '$2y$10$OSz6ztwRPqwqKJCL3Uf0auvEpYi8ll253SswMZr2/7yhdJ7mgNcva'),
+(6, 'toto', 'toto', 'toto', '31200', 'Toulouse', 'toto@outlook.fr', '$2y$10$GbFgSAyvIFikkabN5hTrB.HvVyn0dkmAanGZu/ViRWK70FX/6cgci'),
+(7, 'Piquier', 'Richard', '3 RUE DU CHATEAU NOIR', '31400', 'Toulouse', 'richard.piquier@outlook.fr', '$2y$10$z8lebvwMKmreAL/zV4KmQu7mdUXZwbb.yX.NUmteNYdH.tpLoKHBa');
 
 -- --------------------------------------------------------
 
 --
 -- Structure de la table `tresorier`
 --
+-- Création :  lun. 17 déc. 2018 à 12:55
+--
 
+DROP TABLE IF EXISTS `tresorier`;
 CREATE TABLE `tresorier` (
   `id_tresorier` int(11) NOT NULL,
   `nom_tresorier` varchar(25) DEFAULT NULL,
@@ -453,7 +516,7 @@ ALTER TABLE `club`
 -- AUTO_INCREMENT pour la table `ligne_frais`
 --
 ALTER TABLE `ligne_frais`
-  MODIFY `id_ligne_frais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_ligne_frais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT pour la table `ligue`
@@ -471,7 +534,7 @@ ALTER TABLE `motif`
 -- AUTO_INCREMENT pour la table `note_frais`
 --
 ALTER TABLE `note_frais`
-  MODIFY `id_note_frais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_note_frais` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT pour la table `responsable_crib`
@@ -483,7 +546,7 @@ ALTER TABLE `responsable_crib`
 -- AUTO_INCREMENT pour la table `responsable_legal`
 --
 ALTER TABLE `responsable_legal`
-  MODIFY `id_resp_leg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_resp_leg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `tresorier`
