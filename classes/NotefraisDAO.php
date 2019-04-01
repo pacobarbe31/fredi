@@ -80,6 +80,26 @@ class NotefraisDAO extends DAO {
           return $tableau;
         }
 
+  // Fonction pour afficher l'etat des notes de frais de chaques adhérents mineurs
+  function findAllNoteFraisOfMineur($id_resp_leg){
+
+    $sql ="SELECT note_frais.licence_adh, annee, is_validate
+    FROM note_frais, adherent, responsable_legal 
+    WHERE note_frais.licence_adh = adherent.licence_adh 
+    AND adherent.id_resp_leg = responsable_legal.id_resp_leg
+    AND adherent.id_resp_leg = $id_resp_leg";
+
+    $params = array(":id_resp_leg" => $id_resp_leg);
+
+    $sth = $this->executer($sql, $params);
+          $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
+          $tableau = array();
+          foreach ($rows as $row) {
+            $tableau[] = new notefrais($row);
+          }
+          return $tableau;
+  }
+
   // Fonction pour vérifier si toutes les notes de frais des adhérents mineurs sont validées
   function findIfAllNoteFraisIsValidate($id_resp_leg){
 
@@ -97,15 +117,16 @@ class NotefraisDAO extends DAO {
           foreach ($rows as $row) {
             $tableau[] = new notefrais($row);
           }
-          return $tableau;
 
-    /*foreach($tableau as $uneNoteFrais){
+    $is_validate = false ;
+    foreach($tableau as $uneNoteFrais){
       if($uneNoteFrais->getis_validate() == true){
         $is_validate = true ;
       }else{
         $is_validate = false ;
       }
     }
-    return $is_validate ;*/
+    return $is_validate ;
   }
+
 }
