@@ -28,7 +28,7 @@ if (isset($_SESSION['mail_inscrit'])) {
     $adherent= $adherentDAO->find($licence_adh);
 }else{
     // Sinon on redirige vers la page d'accueil avec un message d'erreur
-    header('Location:index.php?private=1');
+    header('Location: ../index.php?private=1');
 }
 
 //Préparation des méthodes DAO  des lignes de frais

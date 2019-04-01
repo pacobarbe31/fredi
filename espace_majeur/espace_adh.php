@@ -12,7 +12,7 @@ include '../config/init.php';
 if (isset($_SESSION['mail_inscrit'])) {
 	$mail_inscrit = $_SESSION['mail_inscrit'];
   }else{
-  header('Location:index.php?private=1');
+  header('Location: ../index.php?private=1');
   }
   $adherentDAO = new AdherentDAO();
   $adherent= $adherentDAO->findByMail($mail_inscrit);

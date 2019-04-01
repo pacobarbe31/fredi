@@ -12,7 +12,7 @@ include '../config/init.php';
 if (isset($_SESSION['mail_tresorier'])) {
     $mail_tresorier = $_SESSION['mail_tresorier'];
   }else{
-  header('Location:index.php?private=1');
+  header('Location: ../index.php?private=1');
   }
   $tresorierDAO = new TresorierDAO();
   $tresorier= $tresorierDAO->findByMail($mail_tresorier);
