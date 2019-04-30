@@ -57,6 +57,19 @@ class NotefraisDAO extends DAO {
         return $tableau;
       }
 
+  function findbylicenceActual($licence_adh){
+    $sql ="select * from note_frais where licence_adh = :licence_adh AND annee = YEAR(CURDATE())";
+    $params = array(":licence_adh" => $licence_adh);
+    $sth = $this->executer($sql, $params);
+          $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
+          $tableau = array();
+          foreach ($rows as $row) {
+            $tableau[] = new notefrais($row);
+          }
+          // Retourne un tableau d'objet métier
+          return $tableau;
+        }
+
       // On récupère l'année signifiant qu'il y a bien un bordereau qui sera crée en fonction de ses adhérents mineurs
 
   function findBordereauBy($id_resp_leg){
