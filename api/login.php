@@ -49,12 +49,12 @@ if ($authentifie) {
         
           $tableau_lignes[] = array( 
           //"Id borderau"=>$bordereauencour->get_ID_bordereau(),
-          "Date Frais "=>$ligne->getdate_frais(),
+          "DateFrais "=>$ligne->getdate_frais(),
           "Trajet"=>$ligne->gettrajet_frais(), 
           "KM"=>$ligne->getkm_parcourus(), 
           "Peages"=>$ligne->getCout_peage(), 
-          "Cout repas"=>$ligne->getCout_repas(), 
-          "cout hebergement "=>$ligne->getCout_hebergement()
+          "CoutRepas"=>$ligne->getCout_repas(), 
+          "coutHebergement "=>$ligne->getCout_hebergement()
           //"Motif"=>$motifDAO->findMotifByIdMotif($ligne->get_IdMotif())->get_Libelle(),      
           //"nom Club"=>$clubDAO->find($ligne->get_ID_club())->get_Nom_club()  
       ); 
@@ -71,11 +71,11 @@ if ($authentifie) {
   }
   
 // Construit le format JSON
-//$json = build_json($tableau_lignes);
-$json = json_encode($tableau_lignes);
+$json = build_json($tableau_lignes);
+//$json = json_encode($tableau_lignes);
 
-$json2 = json_decode($json);
-var_dump($json);
+//$json2 = json_decode($json);
+//var_dump($json);
 
 // Envoie la réponse 
-//send_json($json);
+send_json($json);
