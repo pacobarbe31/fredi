@@ -37,33 +37,32 @@ if ($authentifie) {
 
     foreach($notes as $UneNote) {
         $id_note_frais = $UneNote->getid_note_frais();
-    }
 
     // Remise a 0 du tableau
-      $tableau_lignes = array();
+    $tableau_lignes = array();
 
-      // Recupere les lignes de frais du bordereau
-      $lignes = $lignefraisDAO->find($id_note_frais);
+    // Recupere les lignes de frais du bordereau
+    $lignes = $lignefraisDAO->find($id_note_frais);
 
-      foreach($lignes as $ligne){
-        
-          $tableau_lignes[] = array( 
-          //"Id borderau"=>$bordereauencour->get_ID_bordereau(),
-          "DateFrais "=>$ligne->getdate_frais(),
-          "Trajet"=>$ligne->gettrajet_frais(), 
-          "KM"=>$ligne->getkm_parcourus(), 
-          "Peages"=>$ligne->getCout_peage(), 
-          "CoutRepas"=>$ligne->getCout_repas(), 
-          "coutHebergement "=>$ligne->getCout_hebergement()
-          //"Motif"=>$motifDAO->findMotifByIdMotif($ligne->get_IdMotif())->get_Libelle(),      
-          //"nom Club"=>$clubDAO->find($ligne->get_ID_club())->get_Nom_club()  
-      ); 
-
-      //var_dump($tableau_lignes);
-
-    $tableau_lignes[] = (object) $ligne;
+    foreach($lignes as $ligne){
+    
+        $tableau_lignes[] = array( 
+        //"Id borderau"=>$bordereauencour->get_ID_bordereau(),
+        "DateFrais "=>$ligne->getdate_frais(),
+        "Trajet"=>$ligne->gettrajet_frais(), 
+        "KM"=>$ligne->getkm_parcourus(), 
+        "Peages"=>$ligne->getCout_peage(), 
+        "CoutRepas"=>$ligne->getCout_repas(), 
+        "coutHebergement "=>$ligne->getCout_hebergement()
+        //"Motif"=>$motifDAO->findMotifByIdMotif($ligne->get_IdMotif())->get_Libelle(),      
+        //"nom Club"=>$clubDAO->find($ligne->get_ID_club())->get_Nom_club()  
+    ); 
 
     }
+}
+    
+    //var_dump($tableau_lignes);
+    //$tableau_lignes[] = (object) $ligne;
    
   // $tableau_bordereauencours[] = (object) $bordereauencour;
   } else {
@@ -71,11 +70,10 @@ if ($authentifie) {
   }
   
 // Construit le format JSON
-$json = build_json($tableau_lignes);
-//$json = json_encode($tableau_lignes);
-
+$json = json_encode($tableau_lignes);
+echo $json;
 //$json2 = json_decode($json);
 //var_dump($json);
 
 // Envoie la réponse 
-send_json($json);
+//send_json($json);
