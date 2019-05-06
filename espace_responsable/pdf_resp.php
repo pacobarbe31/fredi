@@ -31,7 +31,7 @@ $mineurs = $responsable_legalDAO->findAllMineurs($id_resp_leg);
 
 $dsn = 'mysql:host=localhost;dbname=fredi';
 $user = "root";
-$pass = '';
+$pass = 'slam1';
 $con = db_connect($dsn, $user, $pass);
 
 $sql = "SELECT NF.annee, A.licence_adh, A.nom_adh, A.prenom_adh, A.adresse_adh, A.cp_adh, A.ville_adh,

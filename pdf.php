@@ -5,7 +5,7 @@ include "fco.php";
 $id=isset($_GET['id_note_frais']) ? $_GET['id_note_frais'] : '_';
 $dsn = 'mysql:host=localhost;dbname=fredi';
 $user = "root";
-$pass = '';
+$pass = 'slam1';
 $con = db_connect($dsn, $user, $pass);
     /*$sql = "SELECT adherent.licence_adh, note_frais.annee, ligne_frais.trajet_frais, nom_adh, prenom_adh,adresse_adh, cp_adh, ville_adh, date_frais, km_parcourus, cout_peage, cout_repas, cout_hebergement, libelle_motif
     FROM note_frais, adherent, ligne_frais, motif
