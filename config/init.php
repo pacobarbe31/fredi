@@ -34,8 +34,8 @@ define('APPLINAME','fredi');
  * Paramètre de la base de données
  */
  define('DB_USER','root');
- define('DB_PASSWORD','');
- define('DB_HOST','172.17.5.60');
+ define('DB_PASSWORD','slam1');
+ define('DB_HOST','localhost');
  define('DB_NAME','fredi');
 
  //Fonction permettant de rediriger plus facilement en cas d'erreur (a la place d'un header)

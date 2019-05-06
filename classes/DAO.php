@@ -31,7 +31,7 @@ abstract class DAO {
   * @param array $params Paramètres de la requête
   * @return PDOStatement Résultats de la requête
   */
-  protected function executer($sql, $params = null) {
+  function executer($sql, $params = null) {
     try {
       $this->get_connection();
       if ($params == null) {

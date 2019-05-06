@@ -71,9 +71,9 @@ if ($authentifie) {
   
 // Construit le format JSON
 $json = json_encode($tableau_lignes);
-echo $json;
+//echo $json;
 //$json2 = json_decode($json);
 //var_dump($json);
 
 // Envoie la réponse 
-//send_json($json);
+send_json($json);
