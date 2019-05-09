@@ -42,11 +42,11 @@ if ($authentifie) {
         $tableau_lignes[] = array( 
         //"Id borderau"=>$bordereauencour->get_ID_bordereau(),
         "trajet"=>$ligne->gettrajet_frais(),
-        "date "=>$ligne->getdate_frais(),
+        "date"=>$ligne->getdate_frais(),
         "km"=>$ligne->getkm_parcourus(), 
         "peage"=>$ligne->getCout_peage(), 
         "repas"=>$ligne->getCout_repas(), 
-        "heberg "=>$ligne->getCout_hebergement()
+        "heberg"=>$ligne->getCout_hebergement()
         //"Motif"=>$motifDAO->findMotifByIdMotif($ligne->get_IdMotif())->get_Libelle(),      
         //"nom Club"=>$clubDAO->find($ligne->get_ID_club())->get_Nom_club() 
         );
