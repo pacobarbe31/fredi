@@ -67,7 +67,7 @@ include '../inc/user_restriction.php';
 					}
 
 					// Formulaire
-					include('../forms/RL_connexion_form.php') ;
+					include('../forms/RL_Connexion_Form.php') ;
 					echo '<p align="center"><a href="../index.php" class="btn btn-info">Accueil</a> <a href="../register/register_resp_leg.php" class="btn btn-primary"> Inscirption</a></p>';
 					?>
 				</div>

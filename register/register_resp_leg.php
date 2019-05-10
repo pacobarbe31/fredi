@@ -70,7 +70,7 @@ $responsables_legal = $responsable_legalDAO->findAll();
                     }
 
                     // Ajout du formulaire
-                    include('../forms/RL_inscription_form.php') ; 
+                    include('../forms/RL_Inscription_Form.php') ; 
                     echo '<p align="center"><a href="../index.php" class="btn btn-info">Accueil</a> <a href="../login/connexion_resp_leg.php" class="btn btn-primary"> Connexion</a></p>';
 					?>
 				</div>
